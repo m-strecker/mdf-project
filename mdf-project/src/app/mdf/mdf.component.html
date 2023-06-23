@@ -1,0 +1,39 @@
+<h1>Model Driven Form Example</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email  </label>
+      <input type="text" id="email" formControlName="email" class="form-control">
+    </div> <br>
+  
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password  </label>
+      <input type="password" id="password" formControlName="password" class="form-control">
+    </div> <br>
+  
+    <!-- Gender -->
+    <div class="form-group">
+      <label for="gender">Gender  </label>
+      <select id="gender" formControlName="gender" class="form-control">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div><br>
+  
+    <!-- Age -->
+    <div class="form-group">
+      <label for="age">Age  </label>
+      <input type="number" id="age" formControlName="age" class="form-control">
+    </div><br>
+  
+    <!-- Submit Btn-->
+    <button type="submit" class="btn btn-primary">Submit</button> (form values printed to console when submitted, then form resets)
+
+  </form>
+  
+ <h3>Form Values</h3>
+  {{ form.value | json }}
